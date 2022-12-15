@@ -1,15 +1,23 @@
-import { react } from "react";
+import React from "react";
 
 const Greet = (props) => {
-    console.log(props, "props");
-    return (
-    <div>
-        <h1>Welcome { props.name }, The { props.heroName } </h1>
+    return(
+        <div>
+            <h1>Welcome {props.name}, A.K.A The {props.heroName}</h1>
+            { props.children }
+        </div>
+    )
+} 
 
-        { props.children }
-        
-    </div>
-    );
-};
+//de-structured props example in the function
+/*
+const Greet = ({name, heroName}) => {
+    return(
+        <div>
+            <h1>Welcome {name}, A.K.A The {heroName}</h1>
+            
+        </div>
+    )
+} */
 
 export default Greet;
