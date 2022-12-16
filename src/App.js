@@ -14,6 +14,7 @@ import Stylesheet from './components/Stylesheet';
 import Inline from './components/Inline';
 import "./components/appStyles.css";
 import styles from "./components/appStyles.module.css";
+import Form from './components/Form';
 
 function App() {
   return (
@@ -54,6 +55,8 @@ function App() {
       <Stylesheet primary={ true } />
 
       <Inline />
+
+      <Form />
     </div>
   );
 }

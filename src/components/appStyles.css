@@ -1,3 +1,21 @@
 .error {
     color: red;
 }
+
+.mr-2 { margin-right: 0.75rem; }
+.mr-3 { margin-right: 1rem; }
+.mr-4 { margin-right: 1.5rem; }
+.mr-5 { margin-right: 2rem; }
+
+.mb-2 { margin-bottom: 0.75rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 2rem; }
+
+/* layout styles */
+
+.d-flex { display: flex; }
+.dir-col { flex-direction: column;}
+.dir-row { flex-direction: row; }
+.a-center { align-items: center; }
+.j-center { justify-content: center;}
