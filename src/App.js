@@ -15,6 +15,7 @@ import Inline from './components/Inline';
 import "./components/appStyles.css";
 import styles from "./components/appStyles.module.css";
 import Form from './components/Form';
+import LifecycleA from './components/LifecycleA';
 
 function App() {
   return (
@@ -57,6 +58,8 @@ function App() {
       <Inline />
 
       <Form />
+
+      <LifecycleA />
     </div>
   );
 }
