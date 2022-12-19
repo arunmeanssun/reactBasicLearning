@@ -19,6 +19,8 @@ import LifecycleA from './components/LifecycleA';
 import FragmentDemo from './components/FragmentDemo';
 import Table from './components/Table';
 import ParentComponent2 from './components/ParentComponent2';
+import MemoComponent from './components/MemoComponent';
+import RefsDemo from './components/RefsDemo';
 
 function App() {
   return (
@@ -68,7 +70,9 @@ function App() {
 
       <Table />
 
-      <ParentComponent2 />
+      <ParentComponent2 />     
+
+      <RefsDemo /> 
     </div>
   );
 }
