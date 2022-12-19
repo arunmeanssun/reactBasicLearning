@@ -26,7 +26,10 @@ class LifecycleB extends Component {
     }
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log(prevProps, "prevProps");
+        console.log(prevState, "prevState");
         console.log("LifecycleB getSnapshotBeforeUpdate");
+        return null;
     }
 
     componentDidUpdate(){

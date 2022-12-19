@@ -28,17 +28,26 @@ class LifecycleA extends Component {
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log("LifecycleA getSnapshotBeforeUpdate");
+        return null;
     }
 
     componentDidUpdate(){
         console.log("LifecycleA componentDidUpdate");
     }
+
+    changeState = () => {
+        this.setState({
+           name: "Codeevolution" 
+        });
+    };
     
     render() {
         console.log('LifecycleA Render');
         return (
         <div>
             <p>LifecycleA Component</p>
+            <p>{this.state.name}</p>
+            <p><button onClick={this.changeState}>Change State</button></p>
             <LifecycleB />
         </div>
         )

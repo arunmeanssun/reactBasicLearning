@@ -16,6 +16,9 @@ import "./components/appStyles.css";
 import styles from "./components/appStyles.module.css";
 import Form from './components/Form';
 import LifecycleA from './components/LifecycleA';
+import FragmentDemo from './components/FragmentDemo';
+import Table from './components/Table';
+import ParentComponent2 from './components/ParentComponent2';
 
 function App() {
   return (
@@ -60,6 +63,12 @@ function App() {
       <Form />
 
       <LifecycleA />
+
+      <FragmentDemo />
+
+      <Table />
+
+      <ParentComponent2 />
     </div>
   );
 }
