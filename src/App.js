@@ -21,6 +21,13 @@ import Table from './components/Table';
 import ParentComponent2 from './components/ParentComponent2';
 import MemoComponent from './components/MemoComponent';
 import RefsDemo from './components/RefsDemo';
+import FocusInput from './components/FocusInput';
+import ForwardRefParent from './components/ForwardRefParent';
+import PortalDemo from './components/PortalDemo';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
 
 function App() {
   return (
@@ -73,6 +80,21 @@ function App() {
       <ParentComponent2 />     
 
       <RefsDemo /> 
+
+      <FocusInput />
+
+      <ForwardRefParent />
+
+      <PortalDemo />
+      <ErrorBoundary>
+        <Hero heroName="Superman" />
+        <Hero heroName="Batman" />
+        <Hero heroName="Joker" />
+      </ErrorBoundary>
+      
+      <ClickCounter />
+
+      <HoverCounter />
     </div>
   );
 }
