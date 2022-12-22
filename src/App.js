@@ -28,6 +28,12 @@ import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
 import ClickCounter from './components/ClickCounter';
 import HoverCounter from './components/HoverCounter';
+import ClickCounterTwo from './components/ClickCounterTwo';
+import HoverCounterTwo from './components/HoverCounterTwo';
+import User from './components/User';
+import CounterTwo from './components/CounterTwo';
+import { UserProvider } from './components/UserContext';
+import ComponentA from './components/ComponentA';
 
 function App() {
   return (
@@ -45,6 +51,9 @@ function App() {
       <Greet name="Avenash" heroName="Ironman">
         <p>The smart and brainy man in Avengers</p>
       </Greet>
+
+      <hr/>
+      <h2>Passing params to component</h2>
 
       <Welcome name="Arun" heroName="Superman" />
       <Welcome name="Murali" heroName="Hulk" />
@@ -69,15 +78,25 @@ function App() {
 
       <Inline />
 
+      <hr/>
+      <h2>React Form Example</h2>
       <Form />
 
+      <hr/>
+      <h2>React Lifecyle Example</h2>
       <LifecycleA />
-
+      
+      <hr/>
       <FragmentDemo />
 
+      <hr/>
+      <h2>React </h2>
       <Table />
 
-      <ParentComponent2 />     
+      <ParentComponent2 /> 
+
+      <hr/>
+      <h2>React Reference Demo</h2>
 
       <RefsDemo /> 
 
@@ -85,16 +104,76 @@ function App() {
 
       <ForwardRefParent />
 
+      <hr/>
+      <h2>React Portal Example</h2>
+
       <PortalDemo />
+      
+      <hr/>
+      <h2>Error Boundary</h2>
+
       <ErrorBoundary>
         <Hero heroName="Superman" />
         <Hero heroName="Batman" />
         <Hero heroName="Joker" />
       </ErrorBoundary>
       
-      <ClickCounter />
+      <hr/>
+      <h2>Higher Order Components </h2>
 
-      <HoverCounter />
+      <ClickCounter incrementCount="2" />
+
+      <HoverCounter incrementCount="3" />
+
+      <hr/>
+
+      {/*
+
+      <ClickCounterTwo />
+
+      <HoverCounterTwo />
+
+      <User render={(isLoggedIn) => isLoggedIn ? 'Arun' : "Guest" }/> */}
+
+
+      {/* one way for rendering props method is below 
+
+      <h2>Rendering Props method One</h2>
+      <CounterTwo render={(count, incrementCount) => {
+        return <ClickCounterTwo count={count} incrementCount={incrementCount} />
+      }} />
+
+      <CounterTwo render={(count, incrementCount) => {
+        return <HoverCounterTwo count={count} incrementCount={incrementCount} />
+      }} /> */}
+
+      {/* Another way for rendering props method is below */}
+
+      <h2>Rendering Props method two</h2>
+      <CounterTwo>
+        { (count, incrementCount) => {
+          return <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        }}
+      </CounterTwo>
+
+      <CounterTwo>
+        { (count, incrementCount) => {
+          return <HoverCounterTwo count={count} incrementCount={incrementCount} />
+        }}
+      </CounterTwo>
+
+      <hr/>
+      <h2>React Context Demo</h2>
+
+      <UserProvider value="Arun Kumar S">
+        <ComponentA />
+      </UserProvider>
+
+      <hr/>
+      <h2>React HTTP Example</h2>
+
+      
+
     </div>
   );
 }
